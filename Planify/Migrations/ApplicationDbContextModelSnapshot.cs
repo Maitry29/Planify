@@ -22,7 +22,7 @@ namespace Planify.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Planify.Models.TaskItem", b =>
+            modelBuilder.Entity("Planify.Models.Domain.TaskItems", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace Planify.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TaskItems");
+                    b.ToTable("Tasks");
                 });
 #pragma warning restore 612, 618
         }

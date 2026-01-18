@@ -1,6 +1,6 @@
 ﻿namespace Planify.Models.Domain
 {
-    public class TaskItem
+    public class TaskItems
     {
        
             public int Id { get; set; }

@@ -12,7 +12,7 @@ using Planify.Data;
 namespace Planify.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260118062346_Initial Migration")]
+    [Migration("20260118070219_Initial Migration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Planify.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Planify.Models.TaskItem", b =>
+            modelBuilder.Entity("Planify.Models.Domain.TaskItems", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace Planify.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TaskItems");
+                    b.ToTable("Tasks");
                 });
 #pragma warning restore 612, 618
         }
